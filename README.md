@@ -1,7 +1,8 @@
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/mmcginnis9272/CYDERES-CS-Skills-Challenge/blob/main/Horizontal-Lockup---Color.png)
 
-# CYDERES-CS-Skills-Challenge
-CYDERES Customer Success skills challenge test.
+<html>
+       <head><h># CYDERES-CS-Skills-Challenge</h></head>
+       <title>CYDERES Customer Success skills challenge test.</title>
 For the CYDERES Customer Success Engineer challenge, I was provide the following “Security Log Data “ to ingest in to Logstash:
 
 <14>1 2016-12-25T09:03:52.754646-06:00 contosohost1 antivirus 2496 - - alertname="Virus Found" computername="contosopc42" computerip="216.58.194.142" severity="1" 
@@ -35,3 +36,5 @@ Here is the output captured by logstash in both stdout and json:
 
 [2022-05-20T23:19:58,694][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
 {"severity":"High","service":"antivirus”,site”:contosohost1","timestamp":"2016-12-25T09:03:52.754646-06:00","source_ip":"216.58.194.142","description":"Virus Found","hostname":"contosopc42","port":"2496"}
+       </html>
+       <p>![visitors](https://visitor-badge.glitch.me/badge?page_id=${mmcginnis9272}.${mmcginnis9272@gmail.com})</p>
