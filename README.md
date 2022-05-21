@@ -90,7 +90,7 @@ field (<span class=SpellE>alertname</span><span class=GramE>=“</span>Virus
 Found” broke in to 2 parts due to the &lt;space&gt; character, so I appended
 them together with the ‘+’ operator.<span style='mso-spacerun:yes'> 
 </span>Since I only had a single log entry to work with, I can only assume this
-could present problems with further log entries have more or less than 2 words
+could present problems if further log entries have more or less than 2 words
 in this field.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='tab-stops:.5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in;
@@ -238,7 +238,60 @@ Found&quot;,&quot;hostname&quot;:&quot;contosopc42&quot;,&quot;port&quot;:&quot;
 style='font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-font-kerning:
 .5pt'><o:p></o:p></span></p>
 
+   <p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'>Files included in this
+repo of value:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><a
+href="https://github.com/mmcginnis9272/CYDERES-CS-Skills-Challenge/blob/main/README.md">README.md</a>
+– This file<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><a
+href="https://github.com/mmcginnis9272/CYDERES-CS-Skills-Challenge/blob/main/json_output.png">json_output.png</a>
+– <span class=SpellE>Logstach</span> output in <span class=SpellE>json</span>
+format<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><a
+href="https://github.com/mmcginnis9272/CYDERES-CS-Skills-Challenge/blob/main/stdout_output.png">stdout_output.png</a>
+– Logstash output in <span class=SpellE>stdout</span> format <o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><a
+href="https://github.com/mmcginnis9272/CYDERES-CS-Skills-Challenge/blob/main/test.conf"><span
+class=SpellE>test.conf</span></a> – Logstash configuration file<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><a
+href="https://github.com/mmcginnis9272/CYDERES-CS-Skills-Challenge/blob/main/testdata.log">testdata.log</a>
+– Security Log Data to be normalized<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-family:Helvetica;
+mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'><o:p>&nbsp;</o:p></span></p>
+
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
 
 </div>
 
