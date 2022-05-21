@@ -1,4 +1,4 @@
-[![Header](https://www.creative-tim.com/blog/content/images/size/w1140/2021/08/rebranding-post--1-.jpg "Header")]([https://www.creative-tim.com/](https://imgs.search.brave.com/p2tLGK42qizRJ2dF_w_48sfhorqDcI-6RSx6hRQpXao/rs:fit:844:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC41/VnRESnNaZzJjS24t/YTJxVUNqSDB3SGFF/SyZwaWQ9QXBp))
+![alt text](http://url/to/img.png)
 
 # CYDERES-CS-Skills-Challenge
 CYDERES Customer Success skills challenge test.
