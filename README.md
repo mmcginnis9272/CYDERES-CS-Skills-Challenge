@@ -30,7 +30,7 @@ font-family:Helvetica;mso-bidi-font-family:Helvetica'><o:p>&nbsp;</o:p></span></
 <p class=MsoNormal style='tab-stops:.5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in;
 mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
 font-family:Helvetica;mso-bidi-font-family:Helvetica'>For the CYDERES Customer
-Success Engineer challenge, I was provide the following “Security Log Data <span
+Success Engineer challenge, I was provided the following “Security Log Data <span
 class=GramE>“ to</span> ingest in to Logstash:</span><span style='font-family:
 Helvetica;mso-bidi-font-family:Helvetica'><o:p></o:p></span></p>
 
@@ -53,50 +53,37 @@ mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'><o:p>&nbsp;</o:p></span></
 <p class=MsoNormal style='tab-stops:.5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in;
 mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
 font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'>I
-wrote this data in a file called <b>testdata.lo</b>g and placed it in the <span
+wrote this data to the file <b>testdata.lo</b>g and placed it in the <span
 class=SpellE><b>logstas</b>h</span> directory.<span style='mso-spacerun:yes'> 
 </span>I then used the “<b>file</b>” Logstash input plugin in my <span
 class=SpellE><b>test.conf</b></span><b> </b>file.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='tab-stops:.5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in;
 mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
-font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='tab-stops:.5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in;
-mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
-font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'>I
-originally chose the <b>grok</b> Logstash filter plugin to transform the
-data.<span style='mso-spacerun:yes'>  </span>After a few hours battling issues
-getting some grok patterns to match correctly against data within quotes (ah,
+font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'>
+Initially, I chose the <b>grok</b> Logstash filter plugin to transform the
+data.<span style='mso-spacerun:yes'>  </span>After a few hours of battling issues
+with getting certain grok patterns to match correctly against data within quotes (ahh,
 the days I’ve spent trying to “escape” quotes), I decided to try the <b>dissect</b>
-filter.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='tab-stops:.5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in;
-mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
-font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'>This
-turned out to be a much simpler approach as I will describe here:<o:p></o:p></span></p>
-
-<p class=MsoNormal style='tab-stops:.5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in;
-mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
-font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'><o:p>&nbsp;</o:p></span></p>
+filter. This turned out to be a much simpler approach as I will describe here:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='tab-stops:.5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in;
 mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
 font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'>The
 <span class=GramE><b>dissect</b><span style='mso-spacerun:yes'>  </span>filter</span>
-was used to break the log in to fields by using the &lt;space&gt; character
+was used to break the log into fields by using the &lt;space&gt; character
 between each field.<span style='mso-spacerun:yes'>  </span>The “description”
 field (<span class=SpellE>alertname</span><span class=GramE>=“</span>Virus
-Found” broke in to 2 parts due to the &lt;space&gt; character, so I appended
+Found” broke in to 2 parts due to a &lt;space&gt; character, so I appended
 them together with the ‘+’ operator.<span style='mso-spacerun:yes'> 
-</span>Since I only had a single log entry to work with, I can only assume this
-could present problems with further log entries have more or less than 2 words
+</span>Since I only had a single log entry to work with; I can only assume this
+might present problems if further log entries have more or less than 2 words
 in this field.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='tab-stops:.5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in;
 mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
 font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'>I
-also added a few more fields than required such as timestamp, site, service,
+also added a few more fields than required, such as timestamp, site, service,
 and port.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='tab-stops:.5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in;
@@ -118,7 +105,7 @@ font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'><o:p
 mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
 font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'>Then
 I used the <b>mutate</b> filter to split the <span class=SpellE>source_ip</span>,
-description, hostname and security fields at the ‘<span class=GramE>=‘
+description, hostname, and security fields at the ‘<span class=GramE>=‘
 character</span>, and assigned the field back to the right side ([1] array) of
 each. Then I used the <span class=SpellE><b>gsub</b></span> filter to remove
 those dreaded backslashes before the quotes in each field.<o:p></o:p></span></p>
@@ -238,7 +225,60 @@ Found&quot;,&quot;hostname&quot;:&quot;contosopc42&quot;,&quot;port&quot;:&quot;
 style='font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-font-kerning:
 .5pt'><o:p></o:p></span></p>
 
+   <p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'>Files of value included in this
+repo:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><a
+href="https://github.com/mmcginnis9272/CYDERES-CS-Skills-Challenge/blob/main/README.md">README.md</a>
+– This file<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><a
+href="https://github.com/mmcginnis9272/CYDERES-CS-Skills-Challenge/blob/main/json_output.png">json_output.png</a>
+– <span class=SpellE>Logstash</span> output in <span class=SpellE>json</span>
+format<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><a
+href="https://github.com/mmcginnis9272/CYDERES-CS-Skills-Challenge/blob/main/stdout_output.png">stdout_output.png</a>
+– Logstash output in <span class=SpellE>stdout</span> format <o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><a
+href="https://github.com/mmcginnis9272/CYDERES-CS-Skills-Challenge/blob/main/test.conf"><span
+class=SpellE>test.conf</span></a> – Logstash configuration file<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><a
+href="https://github.com/mmcginnis9272/CYDERES-CS-Skills-Challenge/blob/main/testdata.log">testdata.log</a>
+– Security Log Data to be normalized<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
+font-family:Menlo;color:black;mso-font-kerning:.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:28.0pt 56.0pt 84.0pt 112.0pt 140.0pt 168.0pt 196.0pt 224.0pt 3.5in 280.0pt 308.0pt 336.0pt;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-family:Helvetica;
+mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'><o:p>&nbsp;</o:p></span></p>
+
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
 
 </div>
 
