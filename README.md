@@ -64,7 +64,7 @@ font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'>The
 <span class=GramE><b>dissect</b><span style='mso-spacerun:yes'>  </span>filter</span>
 was used to break the log into fields by using the &lt;space&gt; character
 between all fields except for the description field which required the double-quote character due to the possibility 
-of having multiple &lt;space&gt; characters in this field.  I
+of having none or multiple &lt;space&gt; characters in this field.  I
 also added a few more fields than required, such as timestamp, site, service,
 and port.<o:p></o:p></span></p>
 
@@ -72,7 +72,7 @@ and port.<o:p></o:p></span></p>
 mso-layout-grid-align:none;text-autospace:none'><span style='font-size:18.0pt;
 font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-font-kerning:.5pt'>I
 also used the <span class=SpellE><b>remove_field</b></span> filter to remove
-all the extra data fields that Logstash created without asking it to, like
+all the extra data fields that Logstash created by default, like
 host, original, event, log, etc.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='tab-stops:.5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in;
